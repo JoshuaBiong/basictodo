@@ -59,6 +59,14 @@ const filteredTodos = computed(() => {
 const clearCompleted = () => {
   todos.value = todos.value.filter(todo => !todo.completed)
 }
+
+const updateTodo = (id, newText) => {
+  const todo = todos.value.find(todo => todo.id === id)
+  if (todo && newText.trim()) {
+    todo.text = newText.trim()
+  }
+}
+
 </script>
 
 <template>
@@ -122,6 +130,8 @@ const clearCompleted = () => {
                 :todo="todo"
                 @toggle="toggleTodo"
                 @remove="removeTodo"
+                @update="updateTodo"
+
               />
             </ul>
           </div>
