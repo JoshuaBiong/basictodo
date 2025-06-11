@@ -73,9 +73,9 @@ const cancelEdit = () => {
       <button
         v-if="!isEditing"
         @click="startEditing"
-        class="text-blue-500 text-xl opacity-0 group-hover:opacity-100 px-2 hover:text-blue-600 transition-all transform hover:scale-110"
+        class="text-blue-500 text-base opacity-0 group-hover:opacity-100 px-2 hover:text-blue-600 transition-all transform hover:scale-110"
       >
-        ✎
+      edit
       </button>
       <button
         @click="handleRemove"
